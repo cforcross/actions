@@ -1,0 +1,19 @@
+name: How to manually trigger a workflow
+on:
+ workflow_dispatch:
+  inputs:
+   username:
+    description: "your github username"
+    required: true
+  reason:
+    description: "the reason for the dispatch"
+    required: true
+    default: "I am runntin tests"
+
+jobs:
+ tests_manual_workflow:
+  runs-on: ubuntu-latest
+  steps:
+  - run: >
+     echo "User ${{github.event.inputs.username}} is running tests"
+     echo "Reason: ${{github.event.inputs.reason}}"
