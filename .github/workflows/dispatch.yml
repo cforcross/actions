@@ -1,4 +1,6 @@
-name: How to manually trigger a workflow
+name: "authenticate-cross"
+description: "cross"
+author: cross
 on:
  workflow_dispatch:
   inputs:
